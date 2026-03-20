@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Studentmanagementsystem1">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="C:/Users/ytton/eclipse/jee-2025-123/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="21"/>
+    <property name="source" value="21"/>
+    <path id="Studentmanagementsystem1.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.AdmissionPage (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.CoursesDetails (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.Dashboard (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.ExamCellPage.classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.ExamsPage (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.FeesPage (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.LibraryPage (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.Login (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.LogoutPage (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.New_configuration.classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.Register (1).classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <path id="run.Register1.classpath">
+        <path refid="Studentmanagementsystem1.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Studentmanagementsystem1.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AdmissionPage (1)">
+        <java classname="Studentmanagementsystem1.AdmissionPage" failonerror="true" fork="yes">
+            <classpath refid="run.AdmissionPage (1).classpath"/>
+        </java>
+    </target>
+    <target name="CoursesDetails (1)">
+        <java classname="Studentmanagementsystem1.CoursesDetails" failonerror="true" fork="yes">
+            <classpath refid="run.CoursesDetails (1).classpath"/>
+        </java>
+    </target>
+    <target name="Dashboard (1)">
+        <java classname="Studentmanagementsystem1.Dashboard" failonerror="true" fork="yes">
+            <classpath refid="run.Dashboard (1).classpath"/>
+        </java>
+    </target>
+    <target name="ExamCellPage">
+        <java classname="Studentmanagementsystem1.ExamCellPage" failonerror="true" fork="yes">
+            <classpath refid="run.ExamCellPage.classpath"/>
+        </java>
+    </target>
+    <target name="ExamsPage (1)">
+        <java classname="Studentmanagementsystem1.ExamsPage" failonerror="true" fork="yes">
+            <classpath refid="run.ExamsPage (1).classpath"/>
+        </java>
+    </target>
+    <target name="FeesPage (1)">
+        <java classname="Studentmanagementsystem1.FeesPage" failonerror="true" fork="yes">
+            <classpath refid="run.FeesPage (1).classpath"/>
+        </java>
+    </target>
+    <target name="LibraryPage (1)">
+        <java classname="Studentmanagementsystem1.LibraryPage" failonerror="true" fork="yes">
+            <classpath refid="run.LibraryPage (1).classpath"/>
+        </java>
+    </target>
+    <target name="Login (1)">
+        <java classname="Studentmanagementsystem1.Login" failonerror="true" fork="yes">
+            <classpath refid="run.Login (1).classpath"/>
+        </java>
+    </target>
+    <target name="LogoutPage (1)">
+        <java classname="Studentmanagementsystem1.LogoutPage" failonerror="true" fork="yes">
+            <classpath refid="run.LogoutPage (1).classpath"/>
+        </java>
+    </target>
+    <target name="New_configuration">
+        <java classname="" failonerror="true" fork="yes">
+            <classpath refid="run.New_configuration.classpath"/>
+        </java>
+    </target>
+    <target name="Register (1)">
+        <java classname="Studentmanagementsystem1.Register" failonerror="true" fork="yes">
+            <classpath refid="run.Register (1).classpath"/>
+        </java>
+    </target>
+    <target name="Register1">
+        <java classname="Studentmanagementsystem1.Register1" failonerror="true" fork="yes">
+            <classpath refid="run.Register1.classpath"/>
+        </java>
+    </target>
+</project>
